@@ -46,6 +46,22 @@ button:hover {
   text-transform: uppercase;
 }
 
+#form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to left bottom, #5fa8c0d2, #2da8af, #22a78fb2, #4ca160, #77972f);
+  padding: 2rem;
+  max-width: 400px;
+
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
 @media (width <=360px) {
   body {
     width: 100vw
