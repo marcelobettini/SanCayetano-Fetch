@@ -16,7 +16,23 @@ document.addEventListener("click", e => {
   if (e.target.matches("button")) {
     const id = e.target.dataset.id;
     const actualCard = e.target.closest("article");
-    deleteOne(id, actualCard);
+    switch (e.target.id) {
+      case "btnDelete":
+        deleteOne(id, actualCard);
+        break;
+      case "btnEdit":
+        const img = actualCard.querySelector("img");
+        console.log(img.getAttribute("src"));
+        const ttl = actualCard.querySelector("h2");
+        console.log(ttl.innerText);
+        const children = actualCard.querySelectorAll("p");
+        for (const child of children) {
+          console.log(child.innerText);
+        }
+        break;
+      default:
+        break;
+    }
   }
 });
 
@@ -47,7 +63,10 @@ function renderMovies(movies) {
     <p>Directed by ${movie.director}</p>
     <p>${movie.genre.join(", ")}</p>
     <p>rating: ${movie.rate}</p>
-    <button data-id="${movie.id}">Delete</button>
+    <div>
+    <button data-id="${movie.id}" id="btnDelete">Delete</button>
+    <button data-id="${movie.id}" id="btnEdit">Edit</button>
+    <div>
     `;
     movieCard.innerHTML = movieData;
     moviesContainer.appendChild(movieCard);

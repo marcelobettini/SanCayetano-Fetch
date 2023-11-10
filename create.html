@@ -10,51 +10,55 @@
 </head>
 
 <body>
-  <h1>The Movies Database</h1>
-  <p>Your favorite movies in one place</p>
-  <nav>
-    <ul>
-      <li><a href="./index.html">HOME</a></li>
-      <li><a href="./create.html">CREATE</a></li>
-    </ul>
-  </nav>
-  </header>
+  <div class="container">
 
-  <main>
-    <form id='form'>
-      <div class="formGroup">
-        <label for="title">Title</label>
-        <input type="text" id='title' name='title'>
-      </div>
-      <div class="formGroup">
-        <label for="year">Released</label>
-        <input type="text" id='year' name='year'>
-      </div>
-      <div class="formGroup">
-        <label for="director">Director</label>
-        <input type="text" id='director' name='director'>
-      </div>
-      <div class="formGroup">
-        <label for="duration">Duration</label>
-        <input type="text" id='duration' name='duration'>
-      </div>
-      <div class="formGroup">
-        <label for="poster">Poster</label>
-        <input type="text" id='poster' name='poster'>
-      </div>
-      <div class="formGroup">
-        <label for="genre">Genre</label>
-        <input type="text" id='genre' name='genre'>
-      </div>
-      <div class="formGroup">
-        <label for="rate">Rating</label>
-        <input type="text" id='rate' name='rate'>
-      </div>
-      <input type="submit" value="Create Movie">
+    <header>
+      <h1>The Movies Database</h1>
+      <p>Your favorite movies in one place</p>
+      <nav>
+        <ul>
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./create.html">CREATE</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    </form>
-  </main>
+    <main>
+      <form id='form'>
+        <div class="formGroup">
+          <label for="title">Title</label>
+          <input type="text" id='title' name='title' required>
+        </div>
+        <div class="formGroup">
+          <label for="year">Released</label>
+          <input type="text" id='year' name='year' required>
+        </div>
+        <div class="formGroup">
+          <label for="director">Director</label>
+          <input type="text" id='director' name='director' required>
+        </div>
+        <div class="formGroup">
+          <label for="duration">Duration</label>
+          <input type="text" id='duration' name='duration' required value='patatas'>
+        </div>
+        <div class="formGroup">
+          <label for="poster">Poster</label>
+          <input type="text" id='poster' name='poster' required>
+        </div>
+        <div class="formGroup">
+          <label for="genre">Genre</label>
+          <input type="text" id='genre' name='genre' required>
+        </div>
+        <div class="formGroup">
+          <label for="rate">Rating</label>
+          <input type="text" id='rate' name='rate' required>
+        </div>
+        <input type="submit" value="Create Movie">
 
+      </form>
+    </main>
+
+  </div>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+const URL = "https://654436695a0b4b04436c25f6.mockapi.io/";
 //Tomamos referencia del formulario
 const form = document.getElementById("form");
 form.addEventListener("submit", handleFormSubmit);
@@ -17,7 +18,6 @@ function handleFormSubmit(e) {
   const uuid = generateUUID();
 
   const gens = movieData.get("genre").split(", ");
-  console.log(gens);
 
   const newMovie = {
     id: uuid,
@@ -29,7 +29,16 @@ function handleFormSubmit(e) {
     genre: gens,
     rate: movieData.get("rate"),
   };
-  console.log(newMovie);
+  addNewMovie(newMovie);
 }
 
 //método POST para crear una película en el backend
+function addNewMovie(movie) {
+  fetch(URL + "movies", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(movie),
+  }).then(res => {
+    res.ok ? alert("Movie Created") : alert("Error");
+  });
+}

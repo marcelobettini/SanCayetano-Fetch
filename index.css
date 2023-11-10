@@ -1,7 +1,37 @@
+.container {
+  width: 100%;
+}
+
 body {
   width: 80vw;
   text-align: center;
   margin: 0 auto;
+  overflow-y: scroll;
+  scrollbar-width: auto;
+}
+
+header {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  margin: 2rem 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style-type: none;
+}
+
+nav ul a {
+  padding: .3rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
+
+nav ul a:hover {
+  background-color: tomato;
+  color: white
 }
 
 #moviesContainer {
@@ -47,19 +77,50 @@ button:hover {
 }
 
 #form {
+  text-transform: uppercase;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(to left bottom, #5fa8c0d2, #2da8af, #22a78fb2, #4ca160, #77972f);
+  background-image: linear-gradient(to left bottom, #3453c2, #006bbd, #007085, #006d40, #476406);
   padding: 2rem;
   max-width: 400px;
+  border-radius: 10px;
+  box-shadow: -2px 2px 6px;
+  color: rgb(220, 217, 217)
+}
 
+#form input {
+  line-height: 1.5rem;
+  border: none;
+  border-radius: 9px;
+  box-shadow: -2px 2px 6px;
+  padding-left: .5rem;
+}
+
+#form input[type="submit"] {
+  width: 120px;
+  margin: 2rem auto .5rem;
+}
+
+#form input[type="submit"]:hover {
+  cursor: pointer;
 }
 
 .formGroup {
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
+  height: 3rem;
+}
+
+.formGroup label {
+  margin-bottom: .2rem;
+  text-align: start;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (width <=360px) {
